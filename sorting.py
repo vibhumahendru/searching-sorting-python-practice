@@ -46,9 +46,39 @@ def binarySearch(array, findNum):
 
 
 
-found = binarySearch(testAr, 5)
+# found = binarySearch(testAr, 5)
+#
+# if found == 0:
+#     print("Not Found")
+# else:
+#     print("FOUND at = ", found)
 
-if found == 0:
-    print("Not Found")
-else:
-    print("FOUND at = ", found)
+sortedAr = [1,2,3,8,9]
+
+def insert(array, num):
+    # counter = 0
+    # for idx in range(0, len(array)):
+    #     if num < array[idx]:
+    #         array[idx] = num
+    #         break
+    array[6] = array[5]
+    print(array)
+
+
+
+
+
+insert(sortedAr, 5)
+
+
+
+
+
+
+
+
+
+
+
+
+###
