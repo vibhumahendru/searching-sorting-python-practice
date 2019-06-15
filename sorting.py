@@ -54,26 +54,40 @@ def binarySearch(array, findNum):
 #     print("FOUND at = ", found)
 
 sortedAr = [1,2,3,8,9]
+#
+# def insert(array, num):
+#     if array[6]:
+#         print("yeeeee")
+#
+#
+#
+#
+#
+#
+# insert(sortedAr, 5)
+# array1 = [100]
+# array1 = [1,2,3,4,5]
+# array1.append(8)
+# print(array1[6])
 
 def insert(array, num):
-    # counter = 0
-    # for idx in range(0, len(array)):
-    #     if num < array[idx]:
-    #         array[idx] = num
-    #         break
-    array[6] = array[5]
-    print(array)
+    answerIndex = len(array)
+    for index in range(0, len(array)):
+        if num < array[index]:
+            # print("test", index)
+            answerIndex = index
+            break
+    array.append(0)
+    print(array,  answerIndex)
+
+    for value in range(len(array)-1, answerIndex, -1):
+        array[value], array[value-1] = array[value-1], array[value]
 
 
+    array[answerIndex] = num
+    print(array,  answerIndex)
 
-
-
-insert(sortedAr, 5)
-
-
-
-
-
+insert(sortedAr, 2)
 
 
 
